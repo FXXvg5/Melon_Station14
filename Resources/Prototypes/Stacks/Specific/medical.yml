@@ -49,3 +49,11 @@
   icon: {sprite: "/Textures/Objects/Specific/Medical/medical.rsi", state: regenerative-mesh}
   spawn: RegenerativeMesh
 
+  ###melon
+- type: stack
+  parent: BaseSmallStack
+  id: MedicatedSutureRadiation
+  name: stack-medicated-suture_RAD
+  icon: {sprite: "/Textures/Objects/Specific/Medical/medical.rsi", state: medicated-suture_base, color: "#88ff00" }
+  spawn: MedicatedSutureRadiation
+

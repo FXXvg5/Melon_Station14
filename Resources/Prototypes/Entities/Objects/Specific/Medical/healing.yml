@@ -1101,3 +1101,45 @@
     - id: SyringeSaline
     - id: SyringeSigynate
     - id: SyringeTranexamicAcid
+
+
+#########Melon
+- type: entity
+  name: "Анти-радиационная Нить"
+  description: "От радиации лечит."
+  parent: BaseHealingItem
+  id: MedicatedSutureRadiation
+  suffix: Full
+  components:
+  - type: Tag
+    tags:
+    - Brutepack
+  - type: Sprite
+    state: medicated-suture_base
+    color: "#a2ff00"
+  - type: Item
+    heldPrefix: medicated-suture_base
+    color: "#a2ff00"
+    storedRotation: -90
+  - type: Healing
+    damageContainers:
+      - Biological
+    damage:
+      types:
+        Radiation: -30 # 10 for each type in the group
+    bloodlossModifier: -10 # a suture should stop ongoing bleeding
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+  - type: Stack
+    stackType: MedicatedSutureRadiation
+    count: 10
+  - type: StackPrice
+    price: 20

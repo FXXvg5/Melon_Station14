@@ -113,6 +113,18 @@
 		},
         {
 			"name": "bloodpack-blue"
-		}
+		},
+		
+		{
+			"name": "medicated-suture_base"
+		},
+		{
+			"name": "medicated-suture-inhand-left_base",
+			"directions": 4
+		},
+		{
+			"name": "medicated-suture-inhand-right_base",
+			"directions": 4
+		}	
 	]
 }
