@@ -1624,6 +1624,7 @@
   noun: seeds-noun-seeds
   displayName: seeds-watermelon-display-name
   plantRsi: Objects/Specific/Hydroponics/watermelon.rsi
+  color: "#ffcc00"
   packetPrototype: WatermelonSeeds
   productPrototypes:
     - FoodWatermelon

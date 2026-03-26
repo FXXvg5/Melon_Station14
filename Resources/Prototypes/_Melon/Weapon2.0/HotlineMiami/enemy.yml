@@ -1,0 +1,127 @@
+- type: startingGear
+  id: RussiaMafiabase
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitLawyerGood
+    shoes: ClothingShoesBootsLaceup
+    id: SyndiPDA
+
+- type: entity
+  name: Atreides
+  parent: [BaseWeaponSubMachineGun, BaseMajorContraband, WeaponSubMachineGunAtreides]
+  id: WeaponSubMachineGunAtreidesRussia
+  components:
+  - type: Gun
+    fireRate: 10
+  - type: BallisticAmmoProvider
+    proto: CartridgeLightRifle
+    capacity: 100
+
+- type: entity
+  name: Член Русской Мафии
+  parent: BaseMobHuman
+  id: MobRussiaMafiaBase
+  suffix: "база"
+  components:
+    - type: NpcFactionMember
+      factions:
+        - SimpleHostile
+    - type: Loadout
+      prototypes:
+        - RussiaMafiabase
+    - type: InputMover
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        40: Critical
+        65: Dead    
+    - type: MobMover
+    - type: HTN
+      rootTask:
+        task: SimpleHumanoidHostileCompound
+     
+
+- type: entity
+  name: Член Русской Мафии
+  parent: MobRussiaMafiaBase
+  id: MobRussiaMafiaSMG
+  suffix: "Артейдес"
+  components:
+    - type: Gun
+      fireRate: 10
+      selectedMode: Fullauto
+      soundGunshot:
+        path: Audio/Weapons/Guns/Gunshots/atreides.ogg      
+    - type: BallisticAmmoProvider
+      proto: CartridgePistol
+      capacity: 64
+
+- type: entity
+  name: Член Русской Мафии
+  parent: MobRussiaMafiaSMG
+  id: MobRussiaMafiaWt550
+  suffix: "WT550"
+  components:
+    - type: Gun
+      fireRate: 5.5
+      selectedMode: Fullauto
+      soundGunshot:
+        path: Audio/Weapons/Guns/Gunshots/smg.ogg      
+    - type: BallisticAmmoProvider
+      proto: CartridgePistol
+      capacity: 32
+
+- type: entity
+  name: Член Русской Мафии
+  parent: MobRussiaMafiaSMG
+  id: MobRussiaMafialecter
+  suffix: "Лектер"
+  components:
+    - type: Gun
+      fireRate: 5
+      selectedMode: Fullauto
+      soundGunshot:
+        path: Audio/Weapons/Guns/Gunshots/rifle.ogg
+    - type: BallisticAmmoProvider
+      proto: CartridgeRifle
+      capacity: 90
+
+- type: entity
+  name: Член Русской Мафии
+  parent: MobRussiaMafiaSMG
+  id: MobRussiaMafiac20
+  suffix: "C-20r"
+  components:
+    - type: Gun
+      fireRate: 8
+      selectedMode: Fullauto
+      soundGunshot:
+        path: Audio/Weapons/Guns/Gunshots/c-20r.ogg
+    - type: BallisticAmmoProvider
+      proto: CartridgePistol
+      capacity: 90            
+
+- type: entity
+  name: Член Русской Мафии
+  parent: MobRussiaMafiaBase
+  id: MobRussiaMafiamelee
+  suffix: "ближний бой база"
+  components:
+    - type: MeleeWeapon
+      damage:
+        types:
+         Blunt: 25
+      autoAttack: true
+      attackRate: 1.5   
+
+- type: entity
+  parent: MobRussiaMafiamelee
+  id: MobRussiaMafiasword
+  suffix: "ближний бой меч"
+  components:
+    - type: MeleeWeapon
+      damage:
+        types:
+         Slash: 35
+      attackRate: 2.5
+    - type: Reflect
+      reflectProb: 0.65                                        
