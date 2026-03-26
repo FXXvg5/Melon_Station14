@@ -153,3 +153,13 @@ accent-words-scurret-17 = Ваааааа.
 accent-words-scurret-18 = Ваааааа!
 accent-words-scurret-19 = Ваааааа?
 accent-words-scurret-20 = Ваааааа...
+
+accent-words-ponmonkey-1 = Пон
+accent-words-ponmonkey-2 = Пооон
+accent-words-ponmonkey-3 = Люти
+accent-words-ponmonkey-4 = палка
+accent-words-ponmonkey-5 = ударялка
+accent-words-ponmonkey-6 = брадок
+accent-words-ponmonkey-7 = монке
+accent-words-ponmonkey-8 = фанке
+
